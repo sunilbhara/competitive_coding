@@ -9,27 +9,14 @@ class Solution
 	public:
     int gcd(int A, int B) 
 	{ 
-	    // code here
-	    if(A==0)
-	    {
-	        return B;
-	    }
-	    else if(B==0)
+	    
+	    if(B==0)
 	    {
 	        return A;
 	    }
-	    else if(A>B)
-	    {
-	        return gcd(A%B,B);
-	    }
-	    else if(A<B)
-	    {
-	        return gcd(A,B%A);
-	    }
-	    else
-	    {
-	        return A;
-	    }
+	    
+	    return gcd(B,A%B);
+	    
 	      
 	} 
 };
