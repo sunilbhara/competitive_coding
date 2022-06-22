@@ -16,7 +16,7 @@ public:
         {
             if(!isPrime[i]) continue;
             
-            for(int j=i*i;j<n;j=j+=i)
+            for(int j=i*i;j<n;j+=i)
                 isPrime[j]=false;
         }
         
