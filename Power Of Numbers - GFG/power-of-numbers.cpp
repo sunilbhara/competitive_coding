@@ -6,37 +6,35 @@ using namespace std;
  // } Driver Code Ends
 class Solution{
     public:
-    //You need to complete this fucntion
-    
-    // unsigned long long power1(int N1,int R1)
+    // long long power(int N,int R)
     // {
-    //   if(R1==0)
-    //     return 1;
-    //   unsigned long long int temp = power1(N1,R1/2);
-    //   temp = temp*temp;
-    //   if(R1%2==0)
-    //         return temp;
+    //      //Your code here
+    //     long long int x = 1000000007;
+    //     if(N==0)
+    //         return 1;
+    //     int temp = power(N,R/2)%x;
+    //     temp = ((temp%x)*(temp%x))%x;
+    //     if(R%2==0)
+    //         return temp%x;
     //     else
-    //         return temp*N1;
+    //         return (temp*N)%x;
     // }
+
     
     long long power(int N,int R)
     {
-       //Your code here
-       long long int x = 1000000007;
-       long long int res = 1;
+        //Your code here
+        long long int x = 1000000007;
+        long long int res = 1;
        
-       while(R>0)
-       {
-           if(R&1)
-               res = (res*N%x)%x;
+        while(R>0)
+        {
+            if(R&1)
+                res = (res*N%x)%x;
         
         N = (N%x*N%x)%x;
         R = R>>1;
-           
-       }
-    
-       
+        }
         return res;
     }
 
