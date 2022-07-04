@@ -18,7 +18,7 @@ public:
     	}
     */
 	
-	int isPalindrome(string S)
+	int isPalindrome(string S,int i=0)
 	{
 	    // Iterative approach
         int len = S.size();
@@ -34,6 +34,11 @@ public:
         int len = S.size();
         return isPal(S,len,0);
         */
+        
+        // Recursive approach-2
+        if(i > S.size()/2) return 1;
+    
+        return S[i] == S[S.size()-i-1] && isPalindrome(S, i+1) ;
        
 	}
 
