@@ -9,10 +9,18 @@ using namespace std;
 class Solution{
 public:	
 	
+	/*
+    	int isPal(string S,int len,int i)
+    	{
+    	    if(i>=len) return 1;
+    	    if(S[i]!=S[len-1-i])  return 0;
+    	    return isPal(S,len,i+1);
+    	}
+    */
 	
 	int isPalindrome(string S)
 	{
-	    // Your code goes here// Your code goes here
+	    // Iterative approach
         int len = S.size();
         for(int i=0;i<len/2;i++)
         {
@@ -20,6 +28,13 @@ public:
                 return 0;
         }
         return 1;
+        
+        /*
+        // Recursive approach
+        int len = S.size();
+        return isPal(S,len,0);
+        */
+       
 	}
 
 };
