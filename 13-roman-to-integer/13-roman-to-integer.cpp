@@ -19,7 +19,7 @@ public:
                 i++;
             }
             else
-		    sum=sum+m1[s[i]];
+		        sum += m1[s[i]];
         }
     
         return sum;
