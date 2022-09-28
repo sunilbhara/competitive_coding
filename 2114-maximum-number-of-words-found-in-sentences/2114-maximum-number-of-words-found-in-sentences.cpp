@@ -1,21 +1,11 @@
 class Solution {
 public:
     int mostWordsFound(vector<string>& sentences) {
-        int n=sentences.size();
-        int counter, ans=0;
-        for(int i=0;i<n;i++)
-        {
-            int k=sentences[i].length();
-            counter=1;
-            for(int j=0;j<k;j++)
-            {
-                if(sentences[i][j]==' ')
-                {
-                    counter++;
-                }
-            }
-            ans=max(counter, ans);
+        int res = 0;
+        for (auto const &s: sentences) {
+            int n = count(s.begin(), s.end(), ' ');
+            res = max(res, n + 1);
         }
-        return ans;
+        return res;
     }
 };
